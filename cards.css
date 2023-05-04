@@ -1,0 +1,219 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline:0;
+  
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+  }
+
+
+
+/****Default
+css variables 
+makes pseudo class global for css variables and
+*****/
+
+:root{
+  --font-color-base: red;
+  --white: #fff;
+  --black: #000;
+  --font-color-base: rgb(67, 45, 5);
+  --font-color-dark: rgb(182, 74, 55);
+  --font-color-light: #b0aebe;
+  --font-color-link: rgb(207, 119, 103);
+
+  --contrast: rgba(222, 223, 223, 0.8);
+  --success: #64ECF5;
+  --danger: #FF8B8D;
+  --grad-1: #a1ecff;
+  --grad-2: rgb(205, 133, 0);
+
+  --nav: rgb(241, 198, 119);
+  --button:rgb(243, 190, 92); 
+  --footer: rgb(255, 181, 43);
+  --footer-base: rgb(77, 55, 14);
+  --background:  rgb(254, 243, 220);
+
+  --card-background: rgb(236, 204, 136);
+  --background-2: rgb(254, 233, 190);;
+  
+  /**containers**/
+  --container-width-sm: 76%;
+  --container-width-md: 85%;
+  --container-width-lg: 90%;
+
+
+  /***CSS VARIABLES***/
+  --size-10: .625rem;
+  --size-14: .875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-30: 1.875rem;
+  --size-40: 2.5rem;
+  --size-50: 3.125rem;
+  --size-100: 6.25rem;
+  --size-150: 9.375rem;
+
+  --transition: all 40ms ease;
+;}
+
+
+html{
+  /***Important used due to chrome incompatibility fix***/
+  scroll-behavior: smooth !important;
+}
+
+.nav-container a {
+  color:rgb(174, 56, 35)
+}
+.nav-container a h4 {
+    color:rgb(207, 119, 103)
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: var(--size-14); /**equals 14px**/
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--font-color-base);
+  margin: 0;
+  padding: 0;
+  background: var(--background)
+}
+
+.container{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /**allows top and bottom margin to be set later with no issues**/
+} 
+
+section{
+  padding: 6rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4,h5{
+  line-height: 1.2
+}
+h1{font-size: 2.4rem}
+h2{font-size: 2rem}
+h3{font-size: 1.6rem}
+h4{font-size: 1.3rem}
+
+a{color:var(--white)}
+
+li{ 
+  cursor:pointer;
+  font-weight: 700;
+  color:rgb(207, 119, 103);
+}
+li:hover{
+  color:var(--white); 
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style:none
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  margin-top: 0;
+}
+
+h2{
+  font-size: var(--size-30);
+  font-weight: 500px;
+  line-height:1.2;
+}
+
+img{
+  width: 100%;
+  max-width: 100%;
+  vertical-align:middle;
+  border-style:none;
+}
+
+ul{
+  display:flex;
+  align-items:center
+}
+
+
+
+/* frequently asked questions*/
+
+.faqs{
+  box-shadow: inset 0 0 5rem 0 rgba(189, 139, 51, 0.3)
+}
+.faqs-container{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 1rem;
+}
+.faq{
+  background-color: var(--nav);
+  display: flex;
+  padding: 2rem;
+  color: rgb(144, 46, 29);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: .3rem
+}
+.faq h4{
+  font-size: 1.2rem;
+}
+
+.faq-icon{
+  padding: 0 1rem;
+  padding-top: 0.2rem;
+}
+
+.faq p {
+  display: none;
+  color: rgb(144, 46, 29);
+}
+
+.faq.open p {
+  display: block;
+  transition: 3s ease-in-out;
+  border-radius: .3rem
+}
+
+.faq:hover{
+  color: rgb(207, 119, 103);
+  opacity: 90%;
+}
+.faq:active{
+  color: white
+}
